@@ -8,7 +8,7 @@ A. general information:
 
 3. Use simple json library to parse the data.
 
-4. The route could handle not only one redirect, but also multiple redirect.
+4. The route could not only handle not only one redirect, but also extended to support multiple redirect.
 
 5. For events redirect, make handling different method(get/post/put) multi-threaded.
 
@@ -21,7 +21,7 @@ configure the condition/actions at run time
 
 
 C. Questions:
-1. What are your design consideration?
+1. What are your design consideration? <br />
 Ans: Before I implement this structure, the first thing that I think most inportant is that the data has
 to be correctly transferred to server and that why I use socket; Also I realize since there could be many 
 other information be transferred to server, I could use Google Protocol buffer to make it easier; besides,
@@ -29,7 +29,7 @@ it takes me some time to think about how to make the client side for the user to
 enter the host information and then allow the user to continuously enter the condition/actions until he/she
 is done. 
 
-2. Why did you choose to specify the configuration in the way you did? What else did you consider?
+2. Why did you choose to specify the configuration in the way you did? What else did you consider? <br />
 Ans: The most important things for the system are(in my opinion): reliability and user-friendly. That is the 
 whole system based on. Because I want to make it easier to use, I use some guidance for the user; because I 
 want to make the system reliable, I use some other library to do some jobs for me
@@ -37,7 +37,7 @@ want to make the system reliable, I use some other library to do some jobs for m
  if there are some other redirects and I can easily extend it.
  
 3. Where do you see performance/scalability bottleneck? is any? Do you have any thoughts of
-how could we address it?
+how could we address it? <br />
 Ans: The bottleneck for performance could be that what if there are many clients who want to 
 push some <condition + actions> and the server could be busy scanning the machineMap and it could
 potentially influence the performance of the system if there are also many 'write' operation
@@ -45,9 +45,9 @@ to that map. My thought to solve this is that: we could build a queue to store t
 and process it every 2 min(for example). In this way, the 'write' operation will not be blocked.
 
 
-D. How to run the system?
-Firstly run the server;
-Then run the client.
+D. How to run the system?<br />
+Firstly run the server;<br />
+Then run the client.<br />
 
 Enter your curl command as instructed in the terminal and hit enter;
 If you want to enter some <condition + actions>, first enter Yes and 
