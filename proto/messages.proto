@@ -1,0 +1,37 @@
+syntax = "proto3";
+option java_package = "edu.usfca.cs.sift";
+
+// request message method type is one of the get, post or put
+
+message RequestMsg{
+    string host = 1;
+    string port = 2;
+    string redirect = 3;
+    string contentType = 4;
+    string filename = 5;
+    bytes data = 6;
+    string methodType = 7;
+    repeated ConditionActions conditionActions = 8;
+}
+
+message ConditionActions {
+    Condition condition = 1;
+    repeated Action actions = 2;
+}
+
+message Condition {
+    string name = 1;
+    int32 threshold = 2;
+}
+
+message Action {
+    string name = 1;
+    string para = 2;
+    string content = 3;
+}
+
+message MessageWrapper {
+    oneof msg {
+        RequestMsg requestMsg = 1;
+    }
+}
