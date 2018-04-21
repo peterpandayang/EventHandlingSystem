@@ -58,6 +58,15 @@ command to the server once you enter No and hit enter. If you want to
 kill the client, simply enter EOF and hit enter.<br />
 
 
+Run the project from terminal:
+1.Firstly clone the project from: https://github.com/peterpandayang/EventHandlingSystem <br />
+2.Enter the root and use maven to build the project: (/usr/local/Cellar/maven/3.5.2/bin/mvn clean compile package)
+3.Open one terminal and start the client: (java -cp ./target/sift-1.0-SNAPSHOT.jar:target/classes/json-simple-1.1.1.jar:target/classes/protobuf-java-3.4.0.jar edu.usfca.cs.sift.client.Client
+)
+4.Open another terminal and start the server: (java -cp ./target/sift-1.0-SNAPSHOT.jar:target/classes/json-simple-1.1.1.jar:target/classes/protobuf-java-3.4.0.jar edu.usfca.cs.sift.server.Server
+) 
+5.Play with the system!
+
 The following are the screenshot of the demo:
 json input from client: <br /> 
 <img src="screenshots/json.png" width="50%" height="50%" /> <br />

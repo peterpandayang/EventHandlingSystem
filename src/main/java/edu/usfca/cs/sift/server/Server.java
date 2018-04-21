@@ -42,6 +42,7 @@ public class Server {
     public static void main(String[] args) throws IOException {
         initiate();
 
+        System.out.println("server starts to listening on port 5000...");
         serverSocket = new ServerSocket(SERVER_PORT);
 
         while (true) {
