@@ -46,15 +46,27 @@ and process it every 2 min(for example). In this way, the 'write' operation will
 
 
 D. How to run the system?<br />
-Firstly run the server;<br />
-Then run the client.<br />
-
-Enter your curl command as instructed in the terminal and hit enter;
+1.Clone the project from: https://github.com/peterpandayang/EventHandlingSystem <br />
+2.Open with Intellij and make it to be maven project and build <br />
+3.Run the server;<br />
+4.Run the client.<br />
+5.Enter your curl command as instructed in the terminal and hit enter;
 If you want to enter some <condition + actions>, first enter Yes and 
 hit enter, then enter the command as instructed and hit enter; you 
 can keep doing this so on and so forth; the system will send your 
 command to the server once you enter No and hit enter. If you want to
-kill the client, simply enter EOF and hit enter.
+kill the client, simply enter EOF and hit enter.<br />
+
+
+The following are the screenshot of the demo:
+json input from client: <br /> 
+<img src="screenshots/json.png" width="50%" height="50%" /> <br />
+user input : <br />
+<img src="screenshots/client.png" width="50%" height="50%" /> <br />
+server output: <br />
+<img src="screenshots/server.png" width="50%" height="50%" /> <br />
+
+
 
 
 
