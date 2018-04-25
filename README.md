@@ -43,6 +43,9 @@ push some <condition + actions> and the server could be busy scanning the machin
 potentially influence the performance of the system if there are also many 'write' operation
 to that map. My thought to solve this is that: we could build a queue to store the recent <condition + actions>
 and process it every 2 min(for example). In this way, the 'write' operation will not be blocked.
+There coula also have problem like the server is down. In this case, everytime the server is getting the information
+of storing something from the client, it will also write that piece of information to the disk. Next time when the server is recovered,
+it will load the data from the disk and update in the memory.
 
 
 D. How to run the system?<br />
