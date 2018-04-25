@@ -45,7 +45,7 @@ public class EventsRoute extends Route {
         }
         else if(actionType.equals("PUT")){
             ServerPutReqThread thread = new ServerPutReqThread(this);
-            thread.start();
+            threadPool.execute(thread);
         }
         else {
 
